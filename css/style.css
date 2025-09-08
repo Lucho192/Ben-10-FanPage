@@ -1,0 +1,392 @@
+body {
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    background: url('../images/Fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+}
+
+header {
+    background-color: #003300;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column; /* Logo in the middle, menus below */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 1rem 0 0 0; /* Add top margin to place menus below logo */
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem; /* Adjust margin for horizontal links */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #00ff00; /* Green hover effect */
+}
+
+.logo img {
+    max-width: 200px; /* Aumentar el tamaño del logo */
+}
+
+.temporadas-nav .logo img {
+    max-width: 200px;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none; /* Hidden by default, shown on small screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Navigation Links */
+.nav-links ul {
+    display: flex;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Series Selection */
+#series-selection {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.series-logos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.series-logos img {
+    max-width: 150px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.series-logos img:hover {
+    border-color: #00ff00;
+}
+
+/* Series Info */
+#series-info {
+    text-align: left;
+}
+
+.series-info-container-flex {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.series-info-container-flex ul li {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten */
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Contact Form */
+#contacto {
+    text-align: center;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contacto button {
+    background-color: #003300;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contacto button:hover {
+    background-color: #00ff00;
+}
+
+/* Inicio Container */
+.inicio-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-info-box {
+    background-color: white;
+    color: #000;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.contact-info-box h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-info-box p {
+    margin-bottom: 0.5rem;
+}
+
+.google-map {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    margin-top: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center; /* Centrar el logo en modo celular */
+    }
+
+    nav .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav .logo img {
+        max-width: 200px; /* Half of 300px for general logo */
+    }
+
+    .temporadas-nav .logo img {
+        max-width: 150px; /* Half of 150px for temporadas logo */
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .inicio-container {
+        flex-direction: column;
+    }
+
+    .series-info-container-flex {
+        flex-direction: column;
+    }
+
+    #series-selection .series-logos img {
+        max-width: 75px; /* Half of 150px */
+    }
+
+    .series-info-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .google-map {
+        height: 300px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#main-logo,
+#series-info {
+    transition: opacity 0.5s ease-in-out;
+}
+
+#main-logo.fade-out,
+#series-info.fade-out {
+    opacity: 0;
+}
+
+.series-info-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: row;
+}
+
+.series-info-text {
+    flex: 2;
+    order: 1;
+}
+
+.series-info-item img {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 10px;
+    order: 2;
+}
+
+.series-info-text h2 {
+    font-size: 2rem;
+}
+
+.series-info-text p {
+    font-size: 1.2rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
