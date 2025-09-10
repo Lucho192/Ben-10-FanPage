@@ -390,3 +390,33 @@ h1 {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
+/* Seasons Accordion */
+.season {
+    margin-bottom: 1rem;
+}
+
+.season-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #004d00;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.season-header h3 {
+    margin: 0;
+}
+
+.season-content {
+    display: none;
+    padding: 1rem;
+    background-color: #003300;
+    border-radius: 0 0 5px 5px;
+}
+
+.season.active .season-content {
+    display: block;
+}
