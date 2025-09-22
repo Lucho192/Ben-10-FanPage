@@ -219,6 +219,18 @@ h1 {
         flex-direction: column;
         align-items: center; /* Centrar el logo en modo celular */
     }
+    .series-info-text {
+    /* Le damos al texto un orden menor para que aparezca primero */
+    order: 1;
+}
+
+.series-info-item img {
+    /* Le damos a la imagen un orden mayor para que aparezca después */
+    order: 2;
+    /* También puedes añadir un margen para separarlo del texto */
+    margin-top: 1rem;
+}
+
 
     nav .logo {
         margin-bottom: 1rem;
@@ -274,6 +286,16 @@ h1 {
     .series-info-item {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .series-info-text {
+        order: 1;
+    }
+
+    .series-info-item img {
+        order: 2;
+        max-width: 100%;
+        margin-top: 1rem;
     }
 
     .google-map {
@@ -419,4 +441,24 @@ h1 {
 
 .season.active .season-content {
     display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #003300;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #00ff00;
 }

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const seriesLogos = document.querySelectorAll('.series-logos img');
     const seriesInfoItems = document.querySelectorAll('.series-info-item');
+    const selectionMessage = document.getElementById('selection-message');
 
     function showSeriesInfo(series) {
         seriesInfoItems.forEach(item => {
@@ -30,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
         logo.addEventListener('click', () => {
             const series = logo.dataset.series;
             showSeriesInfo(series);
+            if (selectionMessage) {
+                selectionMessage.style.display = 'none';
+            }
         });
     });
 });
