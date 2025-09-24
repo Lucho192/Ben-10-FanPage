@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: white;
     font-family: sans-serif;
@@ -5,10 +9,15 @@ body {
     background: url('../images/Fondo.jpg') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh; /* Ensure body takes at least full viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
-header {
+header, footer {
+    width: 100%;
     background-color: #003300;
+    color: white;
+    text-align: center;
     padding: 1rem;
 }
 
@@ -71,6 +80,7 @@ nav a:hover {
 
 main {
     padding: 2rem;
+    flex: 1;
 }
 
 h1 {
@@ -87,6 +97,7 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .series-logos img {
@@ -104,6 +115,32 @@ h1 {
 #series-info {
     text-align: left;
 }
+
+.series-info-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.series-info-text {
+    flex: 2;
+}
+
+.series-info-item img {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.series-info-text h2 {
+    font-size: 2rem;
+}
+
+.series-info-text p {
+    font-size: 1.2rem;
+}
+
 
 .series-info-container-flex {
     display: flex;
@@ -215,33 +252,35 @@ h1 {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
     nav {
-        flex-direction: column;
         align-items: center; /* Centrar el logo en modo celular */
     }
-    .series-info-text {
-    /* Le damos al texto un orden menor para que aparezca primero */
-    order: 1;
-}
 
-.series-info-item img {
-    /* Le damos a la imagen un orden mayor para que aparezca después */
-    order: 2;
-    /* También puedes añadir un margen para separarlo del texto */
-    margin-top: 1rem;
-}
+    .series-info-item {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .series-info-item img {
+        max-width: 100%;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
 
     nav .logo {
         margin-bottom: 1rem;
     }
 
     nav .logo img {
-        max-width: 200px; /* Half of 300px for general logo */
+        max-width: 150px;
     }
 
     .temporadas-nav .logo img {
-        max-width: 150px; /* Half of 150px for temporadas logo */
+        max-width: 120px;
     }
 
     .menu-toggle {
@@ -280,22 +319,7 @@ h1 {
     }
 
     #series-selection .series-logos img {
-        max-width: 75px; /* Half of 150px */
-    }
-
-    .series-info-item {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .series-info-text {
-        order: 1;
-    }
-
-    .series-info-item img {
-        order: 2;
-        max-width: 100%;
-        margin-top: 1rem;
+        max-width: 60px;
     }
 
     .google-map {
@@ -321,34 +345,6 @@ h1 {
 #main-logo.fade-out,
 #series-info.fade-out {
     opacity: 0;
-}
-
-.series-info-item {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    flex-direction: row;
-}
-
-.series-info-text {
-    flex: 2;
-    order: 1;
-}
-
-.series-info-item img {
-    flex: 1;
-    max-width: 400px;
-    border-radius: 10px;
-    order: 2;
-}
-
-.series-info-text h2 {
-    font-size: 2rem;
-}
-
-.series-info-text p {
-    font-size: 1.2rem;
 }
 
 /* Modal */
@@ -445,10 +441,6 @@ h1 {
 
 /* Footer */
 footer {
-    background-color: #003300;
-    color: white;
-    text-align: center;
-    padding: 1rem;
     margin-top: auto;
 }
 
@@ -461,23 +453,4 @@ footer {
 
 .social-media a:hover {
     color: #00ff00;
-}
-
-
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1; /* ocupa el espacio restante */
-}
-
-footer {
-  background: #003300; /* ajustá al color que uses */
-  color: white;
-  text-align: center;
-  padding: 15px;
 }
