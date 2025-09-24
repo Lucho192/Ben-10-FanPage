@@ -462,3 +462,22 @@ footer {
 .social-media a:hover {
     color: #00ff00;
 }
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa el espacio restante */
+}
+
+footer {
+  background: #003300; /* ajustá al color que uses */
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
