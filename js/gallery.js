@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.getElementById('gallery-container');
     const images = [
-        'images/Galery/Ben10im1.jpg',
-        'images/Galery/Ben10im2.jpg',
-        'images/Galery/Ben10Im3.jpg',
-        'images/Galery/Ben10Im4.jpg',
-        'images/Galery/Ben10Im5.jpg',
-        'images/Galery/Ben10Im6.jpg',
-        'images/Galery/Ben10Im7.jpg',
-        'images/Galery/Ben10im8.jpg',
-        'images/Galery/Ben10im9.jpg',
-        'images/Galery/Ben10im10.jpg',
-        'images/Galery/Ben10im11.jpg',
-        'images/Galery/Ben10im12.jpg'
+        'images/Galery/Ben10im1.webp',
+        'images/Galery/Ben10im2.webp',
+        'images/Galery/Ben10Im3.webp',
+        'images/Galery/Ben10Im4.webp',
+        'images/Galery/Ben10Im5.webp',
+        'images/Galery/Ben10Im6.webp',
+        'images/Galery/Ben10Im7.webp',
+        'images/Galery/Ben10im8.webp',
+        'images/Galery/Ben10im9.webp',
+        'images/Galery/Ben10im10.webp',
+        'images/Galery/Ben10im11.webp',
+        'images/Galery/Ben10im12.webp'
     ];
 
     let galleryImages = '';
